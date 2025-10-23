@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Johnson - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+    /* --- Global Styles and Resets --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f7f6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    line-height: 1.2;
+    color: #2c3e50;
+}
+
+a {
+    text-decoration: none;
+    color: #3498db;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #2980b9;
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 2.5em;
+    border-bottom: 3px solid #3498db;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* --- Header and Navigation --- */
+.main-header {
+    background: #ffffff;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-header h1 {
+    font-size: 1.8em;
+    color: #3498db;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul a {
+    color: #555;
+    font-weight: 400;
+    padding: 5px 0;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    background: linear-gradient(135deg, #3498db, #2c3e50);
+    color: #ffffff;
+    padding: 150px 0;
+    text-align: center;
+}
+
+.hero-content h2 {
+    font-size: 3.5em;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.hero-content p {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #e74c3c;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background: #c0392b;
+}
+
+/* --- About Section --- */
+.about-section {
+    background: #ffffff;
+}
+
+.about-content p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* --- Portfolio Section --- */
+.portfolio-section {
+    background: #ecf0f1;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.project-card h3 {
+    padding: 15px 15px 5px;
+    font-size: 1.5em;
+}
+
+.project-card p {
+    padding: 0 15px 15px;
+}
+
+.project-link {
+    display: block;
+    text-align: center;
+    padding: 10px 15px;
+    background: #f1f1f1;
+    border-top: 1px solid #eee;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+/* --- Skills Section --- */
+.skills-list {
+    text-align: center;
+}
+
+.skill-tag {
+    display: inline-block;
+    background: #3498db;
+    color: #fff;
+    padding: 8px 15px;
+    margin: 10px;
+    border-radius: 20px;
+    font-size: 1.1em;
+    font-weight: 400;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Contact Section --- */
+.contact-section {
+    background: #ffffff;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    font-family: inherit;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+/* --- Footer --- */
+footer {
+    background: #2c3e50;
+    color: #ecf0f1;
+    padding: 40px 0;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-links a {
+    color: #ecf0f1;
+    margin-left: 15px;
+    padding: 5px 10px;
+    border: 1px solid #ecf0f1;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.social-links a:hover {
+    background-color: #3498db;
+    border-color: #3498db;
+}
+
+/* --- Scroll To Top Button --- */
+#scrollToTopBtn {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #e74c3c;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 18px;
+    line-height: 1;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background-color 0.3s;
+}
+
+#scrollToTopBtn:hover {
+    background-color: #c0392b;
+}
+
+/* --- Media Queries for Responsiveness --- */
+@media (max-width: 768px) {
+    .main-header .container {
+        flex-direction: column;
+    }
+
+    .main-header h1 {
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    nav ul li {
+        margin: 5px 10px;
+    }
+
+    .hero-content h2 {
+        font-size: 2.5em;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    footer .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <h1>Lincoln Straton</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Creative Web Developer & Designer</h2>
+                <p>Turning innovative ideas into beautiful, functional, and scalable digital experiences.</p>
+                <a href="#portfolio" class="cta-button">View My Work</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section-padding about-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Me</h2>
+            </div>
+            <div class="about-content">
+                <p>Hello! I'm lincoln, a passionate developer with over five years of experience in front-end and a strong foundation in back-end technologies. My expertise lies in building responsive, user-friendly websites using modern frameworks like React and Vue.js. I thrive in collaborative environments and am always eager to learn new technologies and solve complex problems.</p>
+                <p>When I'm not coding, you can find me hiking in the mountains or experimenting with new recipes in the kitchen. Let's build something amazing together!</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="section-padding portfolio-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Featured Projects</h2>
+            </div>
+            <div class="portfolio-grid">
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/400x300?text=Project+One" alt="Project One Image">
+                    <h3>E-commerce Platform Redesign</h3>
+                    <p>A full redesign and migration of an existing platform to a modern framework, resulting in a 30% increase in conversion rates.</p>
+                    <a href="#" class="project-link">View Case Study &rarr;</a>
+                </div>
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/400x300?text=Project+Two" alt="Project Two Image">
+                    <h3>SaaS Dashboard Development</h3>
+                    <p>Built a complex, real-time analytics dashboard using React and D3.js for data visualization.</p>
+                    <a href="#" class="project-link">View Case Study &rarr;</a>
+                </div>
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/400x300?text=Project+Three" alt="Project Three Image">
+                    <h3>Personal Blog Engine</h3>
+                    <p>Developed a custom, lightweight CMS and blog engine using Node.js and MongoDB.</p>
+                    <a href="#" class="project-link">View Codebase &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section-padding skills-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Technical Skills</h2>
+            </div>
+            <div class="skills-list">
+                <span class="skill-tag">HTML5</span>
+                <span class="skill-tag">CSS3 / SCSS</span>
+                <span class="skill-tag">JavaScript (ES6+)</span>
+                <span class="skill-tag">React.js</span>
+                <span class="skill-tag">Node.js</span>
+                <span class="skill-tag">Python / Django</span>
+                <span class="skill-tag">PostgreSQL</span>
+                <span class="skill-tag">Git / GitHub</span>
+                <span class="skill-tag">Figma / Adobe XD</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section-padding contact-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+                <p>I'm currently available for freelance projects and new opportunities. Drop me a line!</p>
+            </div>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit" class="cta-button">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Lincoln Straton. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" title="LinkedIn">in</a>
+                <a href="#" title="GitHub">gh</a>
+                <a href="#" title="Twitter">tw</a>
+            </div>
+        </div>
+    </footer>
+
+    <button id="scrollToTopBtn" title="Go to top">&#9650;</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
